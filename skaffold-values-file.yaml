@@ -4,7 +4,12 @@ logVerbosity: 8
 
 requestAnalysis: true
 
-credentialsSecret: testcreds
+# Can provide creds in external secret using `existingCredentialsSecret` key or this inline
+# uses this inline for dev purposes
+credentials:
+  users:
+    - username: admin
+      password: foobar
 
 anchoreEndpoint: "http://anchore-anchore-engine-api.anchore.svc.cluster.local:8228"
 policySelectors:
